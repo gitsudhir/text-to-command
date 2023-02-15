@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index page</title>
+    <style>
+        body{
+            width: 50%;
+            margin: auto;
+        }
+        #color-div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+  </head>
+  <body >
+    <h1>Guess Your Color</h1>
+    <form  action="placeholder" method="POST" id="myForm">
+
+        <p>
+            <input type="text" id="new-color" name="colorinput" required/>
+        </p>
+        <p>
+            <input type="submit" value="Calculate" />
+        </p>
+    </form>
+    <hr>
+    <div id="color-div" style="background: <%= color %>"></div>
+    <script>
+        const template = (input) => `/color?like=${input}`;
+        document.getElementById('myForm').addEventListener('submit', function(s) {
+        s.preventDefault();
+        this.action = template(this.elements["colorinput"].value);
+        this.submit();
+        });
+    </script>
+  </body>
+</html>
