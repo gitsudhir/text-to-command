@@ -1,13 +1,16 @@
 const express = require('express');
+const path = require('path');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const { Configuration, OpenAIApi } = require('openai');
 require('dotenv').config();
 
 const app = express();
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
-  res.render('index', { color: 'black' }); // index refers to index.ejs
+  console.log('runnig at /');
+  res.render('index', { color: 'white' }); // index refers to index.ejs
 });
 app.all('/color', async (req, res) => {
   try {

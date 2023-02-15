@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index page</title>
+    <title>Guess Color</title>
+    <link id="page_favicon" href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAraWcAPKiSQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIAAAAAACIiIiAAAAAAIgACIAAAAAAiAAAAAAAAACIAAAAAAAAAIgAAAAAAAREREAIgAAARERERIiAAABEAAhEiAAAAEQAAEQAAAAARABERAAAAABEAERAAAAAAEQAAAAAAAAARAAARAAAAABEREREAAAAAAREREAAAAAD4PwAA8B8AAPOfAADz/wAA8/8AAPP/AACBnwAAAB8AADg/AAA8/wAAMP8AADH/AAA//wAAPP8AAAD/AACB/wAA" rel="icon" type="image/x-icon">
     <style>
         body{
             width: 50%;
@@ -13,6 +14,9 @@
             width: 200px;
             height: 200px;
         }
+        #new-color{
+            width: 80%;
+        }
     </style>
   </head>
   <body >
@@ -20,7 +24,8 @@
     <form  action="placeholder" method="POST" id="myForm">
 
         <p>
-            <input type="text" id="new-color" name="colorinput" required/>
+            <label for="new-color">Enter a paragraph</label><br>
+            <input type="text" id="new-color" name="colorinput" placeholder="eg: a blue sky at dusk" required/>
         </p>
         <p>
             <input type="submit" value="Calculate" />
